@@ -12,13 +12,15 @@ code {
     monospace;
 }
 
-.req {
+.cell {
   width: 3rem;
   height: 3rem;
   border: 3px solid red;
   margin: 5px;
 }
-
+.req:hover {
+  cursor: pointer;
+}
 .container {
   width: 12rem;
   height: 12rem;

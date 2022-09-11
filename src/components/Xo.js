@@ -27,6 +27,12 @@ const Xo = () => {
       alert(`Win: ${info.winner}`);
       setValues(initialValue);
     }
+    const isFull = values.every((item) => item !== "");
+    if (isFull && info.state === "none") {
+      console.log("full no winner");
+      alert("No winner!!!");
+      setValues(initialValue);
+    }
   }, [info]);
 
   const handleClick = (cell) => {
@@ -38,11 +44,6 @@ const Xo = () => {
       return val;
     });
     setValues(cloneArr);
-    const isFull = cloneArr.every((item) => item !== "");
-    if (isFull) {
-      alert("No winner!!!");
-      setValues(initialValue);
-    }
   };
 
   const checkWin = () => {
